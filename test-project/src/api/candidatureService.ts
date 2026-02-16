@@ -1,8 +1,8 @@
 import { http } from './http'
 
 export default {
-  getCandidatures(params: any) {
-    return http.get('/candidatures', { params })
+  getCandidatures() {
+    return http.get('/candidatures')
   },
 
   getById(id: number) {
