@@ -77,7 +77,7 @@ const store = createStore<State>({
           q: state.filters.search
         }
 
-        const response = await candidatureService.getCandidatures(params)
+        const response = await candidatureService.getCandidatures()
 
         commit('SET_ITEMS', response.data)
         commit('SET_TOTAL', response.headers['x-total-count'])

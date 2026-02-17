@@ -173,6 +173,15 @@ const statusClass = (status: string) => {
         </li>
       </ul>
     </div>
+    <!-- Actions -->
+    <div class="flex justify-end mt-4">
+      <RouterLink
+        :to="`/candidatures/${candidature.id}`"
+        class="text-sm px-4 py-1.5 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition"
+      >
+        Voir détails
+      </RouterLink>
+    </div>
   </div>
 </template>
 

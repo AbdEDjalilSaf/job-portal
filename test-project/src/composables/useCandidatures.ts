@@ -40,7 +40,7 @@ export function useCandidatures() {
     competences: '',
     q: '',
     _page: 1,
-    _limit: 5
+    _limit: 4
   })
 
   const totalPages = ref(1)
@@ -51,7 +51,7 @@ export function useCandidatures() {
 
     try {
       const { data, headers } = await candidatureService.getCandidatures()
-console.log("data ============", data,headers)
+      console.log('data ============', data, headers)
       candidatures.value = Array.isArray(data) ? data : []
       
       const total = headers['x-total-count']
@@ -92,6 +92,8 @@ watch(
 
   fetchCandidatures()
 
+
+  
   return {
     candidatures,
     loading,
